@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+    let operation = null;
+
+    function one(operation = null) {
+      if (operation) {
+        return calculate(one(), operation);
+      }
+      return 1;
+    }
+
+    function two(operation = null) {
+      if (operation) {
+        return calculate(two(), operation);
+      }
+      return 2;
+    }
+
+    function three(operation = null) {
+      if (operation) {
+        return calculate(three(), operation);
+      }
+      return 3;
+    }
+
+    function four(operation = null) {
+      if (operation) {
+        return calculate(four(), operation);
+      }
+      return 4;
+    }
+
+    function five(operation = null) {
+      if (operation) {
+        return calculate(five(), operation);
+      }
+      return 5;
+    }
+
+    function six(operation = null) {
+      if (operation) {
+        return calculate(six(), operation);
+      }
+      return 6;
+    }
+
+    function seven(operation = null) {
+      if (operation) {
+        return calculate(seven(), operation);
+      }
+      return 7;
+    }
+
+    function eight(operation = null) {
+      if (operation) {
+        return calculate(eight(), operation);
+      }
+      return 8
+    }
+
+    function nine(operation = null) {
+      if (operation) {
+        return calculate(nine(), operation);
+      }
+      return 9;
+    }
+
+    function plus(number) {
+      operation = 1;
+      return number;
+    }
+
+    function minus(number) {
+      operation = 2;
+      return number;
+    }
+
+    function times(number) {
+      operation = 3;
+      return number;
+    }
+
+    function devidedBy(number) {
+      operation = 4;
+      return number;
+    }
+
+    function calculate(first, second) {
+      switch (operation) {
+        case 1: return first + second;
+        case 2: return first - second;
+        case 3: return first * second;
+        case 4: return Math.round(first / second);
+      }
+    }
+  </script>
+</html>
