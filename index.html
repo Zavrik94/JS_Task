@@ -10,6 +10,13 @@
   <script>
     let operation = null;
 
+    function zero(operation = null) {
+      if (operation) {
+        return calculate(zero(), operation);
+      }
+      return 0;
+    }
+
     function one(operation = null) {
       if (operation) {
         return calculate(one(), operation);
@@ -94,6 +101,9 @@
     }
 
     function calculate(first, second) {
+      if (operation === 4 && second === 0) {
+        return "Error. Division by zero.";
+      }
       switch (operation) {
         case 1: return first + second;
         case 2: return first - second;
